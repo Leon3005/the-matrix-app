@@ -2,10 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 95vh;
+  justify-content: end;
+  height: 50vh;
 }
 
 .header {
   font-family: "Matrix", sans-serif;
+}
+
+.mediaCards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
