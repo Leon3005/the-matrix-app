@@ -5,11 +5,13 @@ import "./Homepage.css";
 const Homepage = () => {
   return (
     <div className="homepage">
-      <div>
-        <h1>This is the homepage</h1>
+      <div className="header">
+        <h1>ENTER THE MATRIX</h1>
       </div>
       <div>
         <MatrixButton buttonName="The Matrix" />
+        <MatrixButton buttonName="The Matrix Reloaded" />
+        <MatrixButton buttonName="The Matrix Revolutions" />
       </div>
     </div>
   );
