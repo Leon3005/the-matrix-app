@@ -6,6 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { useState } from "react";
 
 import Homepage from "./pages/Homepage";
 
@@ -15,13 +16,15 @@ const client = new ApolloClient({
 });
 
 const App = () => {
+  const [apiData, setApiData] = useState();
+
   return (
     <ApolloProvider client={client}>
       <Router>
         <div>
           <Switch>
             <Route path="/">
-              <Homepage />
+              <Homepage apiData={apiData} setApiData={setApiData} />
             </Route>
             <Redirect to="/" />
           </Switch>
