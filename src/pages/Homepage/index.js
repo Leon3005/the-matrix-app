@@ -4,6 +4,16 @@ import MediaCard from "../../components/MediaCard";
 import "./Homepage.css";
 
 const Homepage = ({ apiData, setApiData }) => {
+  console.log(apiData);
+
+  const renderMedia = () => {
+    if (apiData) {
+      return apiData.map((media) => {
+        return <MediaCard data={media} />;
+      });
+    }
+  };
+
   return (
     <div>
       <div className="homepage">
@@ -12,8 +22,8 @@ const Homepage = ({ apiData, setApiData }) => {
         </div>
         <Buttons setApiData={setApiData} />
       </div>
-      <div className="mediaCards">
-        <MediaCard />
+      <div className="cardsContainer">
+        <div className="mediaCards">{renderMedia()}</div>
       </div>
     </div>
   );

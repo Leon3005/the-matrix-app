@@ -28,13 +28,13 @@ const Buttons = ({ setApiData }) => {
   }
 
   if (matrixData) {
-    setApiData(matrixData);
+    setApiData(matrixData.matrix);
   }
   if (reloadedData) {
-    setApiData(reloadedData);
+    setApiData(reloadedData.matrixReloaded);
   }
   if (revolutionsData) {
-    setApiData(revolutionsData);
+    setApiData(revolutionsData.matrixRevolutions);
   }
 
   return (

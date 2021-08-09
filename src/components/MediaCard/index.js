@@ -13,6 +13,9 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     backgroundColor: "#222222",
     boxShadow: "rgba(250, 250, 250, 0.36) 0px 22px 30px 4px;",
+    margin: "1rem",
+    height: "32rem",
+    width: "20rem",
   },
   media: {
     height: 150,
@@ -30,23 +33,23 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MediaCard = () => {
+const MediaCard = ({ data }) => {
   const classes = useStyles();
 
   return (
-    <Card className={("card", classes.root)}>
-      <CardHeader title="The Matrix Reloaded" subheader="Release Year: 2003" />
+    <Card className={classes.root}>
+      <CardHeader title={data.Title} subheader={data.Year} />
       <CardMedia
         className={classes.media}
-        image="https://m.media-amazon.com/images/M/MV5BODE0MzZhZTgtYzkwYi00YmI5LThlZWYtOWRmNWE5ODk0NzMxXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
-        title="The Matrix Reloaded"
+        image={data.Poster}
+        title={data.Title}
       />
       <CardContent>
         <Typography variant="body2" color="white" component="p">
-          Type: Movie
+          {data.Type}
         </Typography>
         <Typography variant="body2" color="white" component="p">
-          IMDB ID: tt0234215
+          {data.imdbID}
         </Typography>
       </CardContent>
     </Card>

@@ -10,10 +10,18 @@
   font-family: "Matrix", sans-serif;
 }
 
+.cardsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .mediaCards {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  width: 90%;
+  flex-wrap: wrap;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
