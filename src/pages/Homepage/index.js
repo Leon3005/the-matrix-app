@@ -4,8 +4,6 @@ import MediaCard from "../../components/MediaCard";
 import "./Homepage.css";
 
 const Homepage = ({ apiData, setApiData }) => {
-  console.log(apiData);
-
   const renderMedia = () => {
     if (apiData) {
       return apiData.map((media) => {

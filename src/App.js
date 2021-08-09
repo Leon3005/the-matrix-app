@@ -6,7 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Homepage from "./pages/Homepage";
 

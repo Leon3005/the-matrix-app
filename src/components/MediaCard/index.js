@@ -41,7 +41,11 @@ const MediaCard = ({ data }) => {
       <CardHeader title={data.Title} subheader={data.Year} />
       <CardMedia
         className={classes.media}
-        image={data.Poster}
+        image={
+          data.Poster === "N/A"
+            ? "http://underscoremusic.co.uk/site/wp-content/uploads/2014/05/no-poster.jpg"
+            : data.Poster
+        }
         title={data.Title}
       />
       <CardContent>
