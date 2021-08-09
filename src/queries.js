@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-export const MEDIA = gql`
+export const MATRIX = gql`
   query Query {
     matrix {
       Title
@@ -9,6 +9,11 @@ export const MEDIA = gql`
       Type
       Poster
     }
+  }
+`;
+
+export const MATRIXRELOADED = gql`
+  query Query {
     matrixReloaded {
       Title
       Type
@@ -16,6 +21,11 @@ export const MEDIA = gql`
       imdbID
       Year
     }
+  }
+`;
+
+export const MATRIXREVOLUTIONS = gql`
+  query Query {
     matrixRevolutions {
       Title
       Year

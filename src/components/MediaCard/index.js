@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
     color: "white",
     backgroundColor: "#222222",
-    boxShadow: "rgba(250, 250, 250, 0.56) 0px 22px 30px 4px;",
+    boxShadow: "rgba(250, 250, 250, 0.36) 0px 22px 30px 4px;",
   },
   media: {
     height: 150,
