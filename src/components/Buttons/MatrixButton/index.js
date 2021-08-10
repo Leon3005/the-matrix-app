@@ -3,13 +3,7 @@ import Button from "@material-ui/core/Button";
 
 import "../Buttons.css";
 
-const MatrixButton = ({
-  query,
-  setApiData,
-  setApiLoading,
-  buttonName,
-  queryArray,
-}) => {
+const MatrixButton = ({ query, setApiData, buttonName, queryArray }) => {
   const client = useApolloClient();
 
   return (
@@ -17,12 +11,9 @@ const MatrixButton = ({
       variant="contained"
       className="matrixBtn"
       onClick={async () => {
-        const { data, loading } = await client.query({
+        const { data } = await client.query({
           query: query,
         });
-        if (loading) {
-          setApiLoading(true);
-        }
         setApiData(data[queryArray]);
       }}
     >

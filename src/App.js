@@ -17,7 +17,6 @@ const client = new ApolloClient({
 
 const App = () => {
   const [apiData, setApiData] = useState();
-  const [apiLoading, setApiLoading] = useState(false);
 
   return (
     <ApolloProvider client={client}>
@@ -25,12 +24,7 @@ const App = () => {
         <div>
           <Switch>
             <Route path="/">
-              <Homepage
-                apiData={apiData}
-                setApiData={setApiData}
-                apiLoading={apiLoading}
-                setApiLoading={setApiLoading}
-              />
+              <Homepage apiData={apiData} setApiData={setApiData} />
             </Route>
             <Redirect to="/" />
           </Switch>
