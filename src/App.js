@@ -11,7 +11,7 @@ import { useState } from "react";
 import Homepage from "./pages/Homepage";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000",
+  uri: process.env.MONGODB_URI || "http://localhost:4000",
   cache: new InMemoryCache(),
 });
 
