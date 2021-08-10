@@ -4,7 +4,7 @@ import MatrixButton from "./MatrixButton";
 
 const Buttons = ({ setApiData }) => {
   return (
-    <div>
+    <div className="buttonsContainer">
       <MatrixButton
         buttonName="The Matrix"
         query={MATRIX}

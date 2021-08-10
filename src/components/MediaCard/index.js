@@ -49,11 +49,11 @@ const MediaCard = ({ data }) => {
         title={data.Title}
       />
       <CardContent>
-        <Typography variant="body2" color="white" component="p">
-          {data.Type}
+        <Typography variant="body2" component="p">
+          Type: {data.Type}
         </Typography>
-        <Typography variant="body2" color="white" component="p">
-          {data.imdbID}
+        <Typography variant="body2" component="p">
+          IMDB ID: {data.imdbID}
         </Typography>
       </CardContent>
     </Card>

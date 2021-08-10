@@ -1,5 +1,17 @@
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .matrixBtn {
   background-color: green !important;
   margin: 1rem !important;
   width: 15rem;
+}
+
+@media screen and (max-width: 800px) {
+  .buttonsContainer {
+    flex-direction: column;
+  }
 }
