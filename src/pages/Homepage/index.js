@@ -3,9 +3,14 @@ import MediaCard from "../../components/MediaCard";
 
 import "./Homepage.css";
 
-const Homepage = ({ apiData, setApiData }) => {
+const Homepage = ({ apiData, setApiData, apiLoading, setApiLoading }) => {
   const renderMedia = () => {
+    if (apiLoading) {
+      return <h1> Loading </h1>;
+    }
+
     if (apiData) {
+      setApiLoading(false);
       return apiData.map((media) => {
         return <MediaCard data={media} />;
       });
@@ -18,7 +23,7 @@ const Homepage = ({ apiData, setApiData }) => {
         <div className="header">
           <h1>ENTER THE MATRIX</h1>
         </div>
-        <Buttons setApiData={setApiData} />
+        <Buttons setApiData={setApiData} setApiLoading={setApiLoading} />
       </div>
       <div className="cardsContainer">
         <div className="mediaCards">{renderMedia()}</div>

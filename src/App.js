@@ -11,12 +11,13 @@ import { useState } from "react";
 import Homepage from "./pages/Homepage";
 
 const client = new ApolloClient({
-  uri: process.env.MONGODB_URI || "http://localhost:4000",
+  uri: "https://lw-the-matrix-server.herokuapp.com/",
   cache: new InMemoryCache(),
 });
 
 const App = () => {
   const [apiData, setApiData] = useState();
+  const [apiLoading, setApiLoading] = useState(false);
 
   return (
     <ApolloProvider client={client}>
@@ -24,7 +25,12 @@ const App = () => {
         <div>
           <Switch>
             <Route path="/">
-              <Homepage apiData={apiData} setApiData={setApiData} />
+              <Homepage
+                apiData={apiData}
+                setApiData={setApiData}
+                apiLoading={apiLoading}
+                setApiLoading={setApiLoading}
+              />
             </Route>
             <Redirect to="/" />
           </Switch>
