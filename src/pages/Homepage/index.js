@@ -6,7 +6,7 @@ import "./Homepage.css";
 const Homepage = ({ apiData, setApiData, apiLoading, setApiLoading }) => {
   const renderMedia = () => {
     if (apiLoading) {
-      return <h1> Loading </h1>;
+      return <h1> Loading data... </h1>;
     }
 
     if (apiData) {
